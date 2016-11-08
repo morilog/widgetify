@@ -41,7 +41,7 @@ class WidgetifyServiceProvider extends ServiceProvider
 
     protected function registerBladeDirectives()
     {
-        $hasParaenthesis = version_compare($the->app->version(), '5.3', '<');
+        $hasParaenthesis = version_compare($this->app->version(), '5.3', '<');
 
         Blade::directive('widgetify', function ($expression) use ($hasParaenthesis) {
             $expression = $hasParaenthesis ? $expression : "($expression)";
