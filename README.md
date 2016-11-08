@@ -1,5 +1,10 @@
 # Widgetify
-Laravel widget package
+Laravel widget package for Laravel >= 5.1
+
+## Installation
+```
+composer require morilog/widgetify
+```
 
 #### TODO
 - Write tests
