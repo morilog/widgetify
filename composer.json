@@ -1,0 +1,27 @@
+{
+    "name": "morilog/widgetify",
+    "description": "A powerful laravel widget package. capsulate ui componenet as widget. similar to Yii widgets",
+    "keywords": ["laravel", "widgets", "widget", "view-composer", "morilog", "laratalks"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Morteza Parvini",
+            "email": "m.parvini@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": ">=5.1",
+        "illuminate/contracts": ">=5.1",
+        "illuminate/container": ">=5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Morilog\\Widgetify\\": "src/"
+        }
+    }
+}
