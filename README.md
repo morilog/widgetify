@@ -85,8 +85,3 @@ OR with `Widgetify` Facade:
 </div>
 
 ```
-
----
-### TODO
-- Write tests
-- Add cache support
