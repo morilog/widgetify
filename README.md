@@ -54,7 +54,7 @@ With blade `@widgetify` directive:
 ```php
 // views/sidebar.blade.php
 <div class="col-sm-3">
-	@widgetify('simple_widgets')
+	@widgetify('simple_widget')
 </div>
 ```
 
@@ -62,7 +62,7 @@ OR with configs:
 ```php
 // views/sidebar.blade.php
 <div class="col-sm-3">
-	@widgetify('simple_widgets', ['key' => 'value', 'key2' => 'value'])
+	@widgetify('simple_widget', ['key' => 'value', 'key2' => 'value'])
 </div>
 ```
 
@@ -73,6 +73,19 @@ OR with `Widgetify` Facade:
 	{!! Widgetify::render('simple_widgets') !!}
 </div>
 ```
+
+#### Using cache
+```php
+// views/default.blade.php
+<div class="col-sm-4">
+    {!! Widgetify::remember('my_widget', 15, [CONFIGS]); !!}
+</div>
+<div class="col-sm-4">
+    @cached_widgetify('my_widget', 15, [CONFIGS]);
+</div>
+
+```
+
 ---
 ### TODO
 - Write tests

@@ -48,6 +48,12 @@ class WidgetifyServiceProvider extends ServiceProvider
 
             return "<?php echo app('morilog.widgetify')->render{$expression}; ?>";
         });
+
+        Blade::directive('cached_widgetify', function ($expression) use ($hasParaenthesis) {
+            $expression = $hasParaenthesis ? $expression : "($expression)";
+
+            return "<?php echo app('morilog.widgetify')->remember{$expression}; ?>";
+        });
     }
 
     public function provides()
